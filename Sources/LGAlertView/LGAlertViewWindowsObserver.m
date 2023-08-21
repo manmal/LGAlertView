@@ -69,8 +69,8 @@
 
 - (void)windowVisibleChanged:(NSNotification *)notification {
     UIWindow *window = notification.object;
-    __weak UIWindow *weakWindow = window;
     NSString *windowClassName = NSStringFromClass([window class]);
+    __weak UIWindow *weakWindow = window;
 
     if (![windowClassName containsString:@"Alert"]) {
         return;
